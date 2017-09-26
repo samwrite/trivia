@@ -1,0 +1,29 @@
+Hi ! Do this test and submit when you are done. gl
+<form (submit)="submitTest()" #form="ngForm">
+  <div id="q1">
+    <p>1. {{testQuestions[0].q}}</p>
+    <input type="radio" name="q1" value="{{testQuestions[0].correct}}"> {{testQuestions[0].correct}}<br>
+    <input type="radio" name="q1" value="{{testQuestions[0].fake1}}"> {{testQuestions[0].fake1}}<br>
+    <input type="radio" name="q1" value="{{testQuestions[0].fake2}}"> {{testQuestions[0].fake2}}
+  </div>
+  <br>
+
+  <div id="q2">
+      <p>2. {{testQuestions[1].q}}</p>      
+    <input type="radio" name="q2" value="{{testQuestions[1].correct}}"> {{testQuestions[1].correct}}<br>
+    <input type="radio" name="q2" value="{{testQuestions[1].fake1}}"> {{testQuestions[1].fake1}}<br>
+    <input type="radio" name="q2" value="{{testQuestions[1].fake2}}"> {{testQuestions[1].fake2}}
+  </div>
+  <br>
+
+  <div id="q3">
+      <p>3. {{testQuestions[2].q}}</p>            
+    <input type="radio" name="q3" value="{{testQuestions[2].correct}}"> {{testQuestions[2].correct}}<br>
+    <input type="radio" name="q3" value="{{testQuestions[2].fake1}}"> {{testQuestions[2].fake1}}<br>
+    <input type="radio" name="q3" value="{{testQuestions[2].fake2}}"> {{testQuestions[2].fake2}}
+  </div>
+  <br>
+  
+  <button [routerLink]="['/dashboard']">Cancel</button>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

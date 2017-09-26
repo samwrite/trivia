@@ -1,0 +1,18 @@
+<h2><a [routerLink]="['/dashboard']">Home</a> | 
+  <a [routerLink]="['/add']">Add a Question</a>
+  <a href="">Logout</a>
+</h2>
+<div id="play">
+  <button [routerLink]="['/test']">Play</button>
+  <p>Click the button above to start the trivia game.</p>
+</div>
+<div class="search"><label>Search</label> <input type="text" id="search" name="searchBar" class="searchBar" [(ngModel)]="searchStr"></div>
+
+<div id="scores">
+    <table class="table table-striped">
+        <tr>
+          <th>Name</th>
+          <th>Score</th> 
+          <th>Percentage</th>
+        </tr>
+      </table></div>
